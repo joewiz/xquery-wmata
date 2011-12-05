@@ -343,7 +343,7 @@ declare function wmata:get-bus-prediction($api-key as xs:string, $stop-id as xs:
 (:~
  : Helper function that sends the requests to the WMATA API 
  : @param $api-url the URL of the API method
- : @param $api-key optional URL parameters, supplied in the form name=value
+ : @param $params optional URL parameters, supplied in the form name=value
  : @param $api-key your API key
  :)
 declare function wmata:_request($api-url as xs:string, $params as xs:string*, $api-key as xs:string) {
