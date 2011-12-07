@@ -94,7 +94,20 @@ declare function wmata:get-rail-paths($api-key as xs:string, $from-station-id as
 
 (:~
  : Method 5, Rail Station Prediction:
- : Returns train arrival information as it appears on the Public Information Displays throughout the system.
+ : Returns train arrival information for all trains in the system.
+ : @see http://developer.wmata.com/docs/read/Method_5
+ : @param $api-key your API key
+ : @return train arrival information as it appears on the Public Information Displays throughout the system
+ :)
+declare function wmata:get-rail-station-prediction($api-key as xs:string) as element(wmata:AIMPredictionResp){
+    let $api-url := concat('http://api.wmata.com/StationPrediction.svc/GetPrediction/', 'All')
+    return
+        wmata:_request($api-url, (), $api-key)
+};
+
+(:~
+ : Method 5, Rail Station Prediction:
+ : Returns train arrival information for one or more stations the system.
  : @see http://developer.wmata.com/docs/read/Method_5
  : @param $api-key your API key
  : @param $station-ids the IDs of one or more stations
