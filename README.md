@@ -15,7 +15,7 @@ XQuery implementation that support it.
 To build this into an EXPath Package, you will need [Apache Ant](http://ant.apache.org/).  To install the package, you 
 need an implementation of XQuery that supports the EXPath Package system.
 
-This package is dependent on the [EXPath HTTP Client]() for making HTTP requests.
+This package is dependent on the [EXPath HTTP Client](http://expath.org/spec/http-client) for making HTTP requests.
 
 This package has been tested with eXist 2.0RC2.  
 
