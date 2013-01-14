@@ -1,0 +1,9 @@
+<package xmlns="http://expath.org/ns/pkg" name="http://www.wmata.com"
+    abbrev="wmata" version="0.2" spec="1.0">
+    <title>WMATA Metro Transparent Data Sets API XQuery Library</title>
+    <dependency package="http://expath.org/ns/http-client"/>
+    <xquery>
+        <namespace>http://www.wmata.com</namespace>
+        <file>wmata.xql</file>
+    </xquery>
+</package>
